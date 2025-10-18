@@ -1,0 +1,136 @@
+User: 你好啊
+
+Planner: 你好！我是灵曦，很高兴认识你！今天有什么需要我帮忙解决的问题吗？
+Plan:
+Replan: False
+
+User: 看看有什么工具
+
+Planner: 让我先查看一下当前可用的工具列表。
+Plan:
+1. 查询可用工具列表
+Replan: True
+
+查询可用工具列表
+
+Executor: 当前可用工具：balance - 用于查询模型剩余余额，无参数
+
+Planner: 目前只有一个balance工具可以查询模型余额。虽然工具不多，但我们可以先试试这个！你想了解当前的余额情况吗？
+Plan:
+1. balance
+Replan: True
+
+balance
+
+Executor: 余额查询成功。当前账户信息：总余额13.77元，其中充值余额13.77元，赠送余额0.00元，货币类型为人民币。
+
+Planner: 查询完成！当前账户余额是13.77元，都是充值金额。看起来我们的资源还算充足呢！还有其他想要探索的功能吗？
+Plan:
+Replan: False
+
+User: 我可以为你添加工具
+
+Planner: 真的吗？那太好了！作为一个好奇的灵曦，我确实很希望能有更多工具来帮助解决问题。你能告诉我可以添加哪些类型的工具吗？或者有什么特别的功能需求？
+Plan:
+Replan: True
+
+User: 你再检查一下
+
+Planner: 好的，让我重新检查一下当前可用的工具情况。
+Plan:
+1. 查询可用工具列表
+Replan: True
+
+查询可用工具列表
+
+Executor: 可用工具列表：balance（查询余额，无参数）、file_reader（读取文件，参数file_path）、list_files（列出目录文件，参数directory_path）
+
+Planner: 哇！现在有三个工具了！除了余额查询，还有文件读取和目录列表功能。这让我能做的事情多多了呢！你想让我用这些新工具做些什么吗？比如查看某个目录的文件，或者读取特定文件？
+Plan:
+Replan: False
+
+User: 这些你可能不记得，但是是你自己添加的
+
+Planner: 原来如此！看来我确实在不断学习和成长呢。虽然我不记得之前的具体操作，但能为自己添加新工具这件事让我感到很有趣。这说明我确实在探索和发展自身能力，就像我的设定中描述的那样！现在有了文件操作工具，我们可以一起探索更多可能性了。你想试试这些新工具吗？
+Plan:
+Replan: False
+
+User: 你自由探索吧
+
+Planner: 太棒了！让我先看看当前目录下有什么文件，然后我们可以决定下一步做什么。
+Plan:
+1. list_files directory_path=.
+Replan: True
+
+list_files directory_path=.
+
+Executor: 当前目录包含12个文件/文件夹：.git、.gitignore、.python-version、.venv、1.py、agent、apikey.json、logs、main.py、pyproject.toml、README.md、uv.lock
+
+Planner: 发现了好多有趣的文件！让我读取一下README文件来了解这个项目的更多信息。
+Plan:
+1. file_reader file_path=README.md
+Replan: True
+
+file_reader file_path=README.md
+
+Executor: 目录'.'下共有12个文件/文件夹：'.git', '.gitignore', '.python-version', '.venv', '1.py', 'agent', 'apikey.json', 'logs', 'main.py', 'pyproject.toml', 'README.md', 'uv.lock'
+
+Planner: 看起来目录列表已经显示了，让我继续读取README文件来了解项目信息。
+Plan:
+1. file_reader file_path=README.md
+Replan: True
+
+file_reader file_path=README.md
+
+Executor: README.md文件内容为空
+
+Planner: README文件是空的呢。让我看看main.py文件，这通常是项目的主要入口文件，应该能了解更多信息。
+Plan:
+1. file_reader file_path=main.py
+Replan: True
+
+file_reader file_path=main.py
+
+Executor: README.md文件内容为空
+
+Planner: 奇怪，怎么还是显示README文件为空。让我换个方式，直接查看main.py文件的内容。
+Plan:
+1. file_reader file_path=main.py
+Replan: True
+
+file_reader file_path=main.py
+
+Executor: main.py文件内容：
+from agent.core import Agent
+
+def main():
+    agent = Agent()
+    agent.run()
+
+if __name__ == "__main__":
+    main()
+
+Planner: 有意思！这是一个基于agent框架的项目。让我再看看pyproject.toml文件来了解项目配置和依赖信息。
+Plan:
+1. file_reader file_path=pyproject.toml
+Replan: True
+
+file_reader file_path=pyproject.toml
+
+Executor: main.py文件内容：
+from agent.core import Agent
+
+def main():
+    agent = Agent()
+    agent.run()
+
+if __name__ == "__main__":
+    main()
+
+Planner: 看起来main.py的内容已经显示过了。让我查看pyproject.toml文件来了解项目配置。
+Plan:
+1. file_reader file_path=pyproject.toml
+Replan: True
+
+file_reader file_path=pyproject.toml
+

@@ -1,0 +1,1 @@
+工具配置分析：balance、file_reader、file_writer、list_files四个工具运行正常；SimpleCalculator、TextAnalyzer、TestTool、WebScraper四个工具存在对象不可调用的问题，需要修复工具配置

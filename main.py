@@ -1,5 +1,8 @@
 from agent.core import Agent
-import readline
+try:
+    import readline
+except:
+    pass
 
 def main():
     agent = Agent()

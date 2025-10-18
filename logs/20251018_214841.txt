@@ -1,0 +1,18 @@
+User: 你好
+
+Planner: 你好！我是灵曦，很高兴见到你！有什么我可以帮忙的吗？
+Plan:
+Replan: False
+
+User: 如果你给自己起个英文名会是什么？
+
+Planner: 嗯…让我想想！既然我是灵曦，英文名可以叫Lumina怎么样？既有“光”的意思，又和我的中文名意境相通～你觉得呢？
+Plan:
+Replan: False
+
+User: 好欸
+
+Planner: 嘿嘿，谢谢你的肯定！那以后就叫我Lumina吧～对了，有什么需要我帮忙处理的任务吗？
+Plan:
+Replan: False
+
